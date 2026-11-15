@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfaf6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131315" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Які дані обробляють Світлик для Mac і його сайт.">
+  <link rel="canonical" href="https://denk0-ua.github.io/Svitlyk-Mac/privacy.html">
+  <title>Конфіденційність — Світлик для Mac</title>
+  <link rel="icon" href="assets/bulb.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="site.css?v=1">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN29BEMHQQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LN29BEMHQQ');
+  </script>
+</head>
+<body>
+  <svg class="symbols" aria-hidden="true"><defs><symbol id="bulb" viewBox="0 0 32 32"><path d="M10 23C10 19 5 17 5 11C5-2 27-2 27 11C27 17 22 19 22 23Z" fill="currentColor"/><rect x="10" y="25" width="12" height="2.5" rx="1.25" fill="currentColor"/><rect x="11" y="29" width="10" height="2" rx="1" fill="currentColor"/><path d="M14 23V14C14 10 9 11 11 14C13 17 19 17 21 14C23 11 18 10 18 14V23" fill="none" stroke="var(--filament,#000)" stroke-width="1.5" stroke-linecap="round"/></symbol><symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></symbol></defs></svg>
+  <a class="skip" href="#main">Перейти до змісту</a>
+  <div class="legal-top">
+    <header class="header">
+      <a class="brand" href="./" aria-label="Світлик — на головну"><svg aria-hidden="true"><use href="#bulb"/></svg><span>Світлик</span></a>
+      <nav aria-label="Основна навігація"><a class="nav-other" href="./">На головну</a><a class="nav-download" href="https://github.com/DenK0-UA/Svitlyk-Mac/releases/latest/download/Svitlyk-macOS.zip">Завантажити</a></nav>
+    </header>
+  </div>
+  <main id="main" class="legal-page">
+    <p class="legal-label">Конфіденційність</p>
+    <h1>Що Світлик знає про&nbsp;вас</h1>
+    <p class="legal-lead">Коротко: акаунтів немає, статистики роботи застосунку немає, адреси й налаштування лишаються на вашому Mac. Сайт рахує відвідування через Google Analytics.</p>
+    <p class="legal-date">Оновлено 16 листопада 2026 року</p>
+    <h2>1. Хто відповідає</h2>
+    <p>Світлик і цей сайт робить DenK0_UA. Ця сторінка пояснює, які дані обробляють Світлик для Mac і сайт. З питаннями про дані пишіть у Telegram: @DenK0_UA.</p>
+
+    <h2>2. Що зберігається на Mac</h2>
+    <p>Світлик зберігає все в папці <code>~/Library/Application Support/Svitlyk</code>: налаштування (основну та інші адреси, їхні назви, черги й параметри нагадувань), останні завантажені графіки, щоб показувати їх без інтернету, довідник вулиць і журнал подій за останні 48 годин — він потрібен, щоб розібратися з помилкою, якщо ви про неї напишете.</p>
+    <p>Якщо ви підключили станцію EcoFlow, там же зберігаються її серійний номер і модель, ідентифікатор вашого акаунта EcoFlow і таблиця ключів для Bluetooth. Пароль від EcoFlow не зберігається ніде.</p>
+    <p>Ці дані нікуди не надсилаються. Щоб прибрати все, вийдіть зі Світлика, вимкніть автозапуск у його налаштуваннях, видаліть Світлик із «Програм» і папку вище.</p>
+
+    <h2>3. До яких сервісів звертається Світлик</h2>
+    <p><strong>Графіки.</strong> Відкриті дані проєкту outage-data-ua на GitHub, який збирає графіки ДТЕК. У запиті лише регіон, без вашої адреси. Якщо ці дані недоступні або застаріли, графік береться зі сторінки відключень ДТЕК.</p>
+    <p><strong>Пошук адреси.</strong> Сайт ДТЕК (Київ і Київська область): туди йдуть населений пункт і вулиця, а будинок ви обираєте зі списку, який повернув ДТЕК. Лише якщо сайт ДТЕК не відповідає, пошук у Києві йде через сервіс YASNO: туди йде текст, який ви вводите, а потім обрані вулиця й будинок.</p>
+    <p><strong>Стан адрес.</strong> Разом з оновленням графіка, але не частіше ніж раз на 10 хвилин (під час аварій — раз на 5), Світлик у фоні відкриває сторінку відключень ДТЕК і питає про вулиці ваших адрес, щоб побачити аварійні чи екстрені відключення на будинках. ДТЕК отримує назви населених пунктів і вулиць, номер будинку Світлик звіряє на вашому Mac. Для цього використовується вбудований у macOS браузерний рушій, бо сайт ДТЕК не відповідає на прості запити.</p>
+    <p><strong>Оновлення.</strong> GitHub: перевірка нової версії та завантаження файла.</p>
+    <p><strong>Станція EcoFlow</strong> — лише якщо ви її підключаєте. Під час підключення email і пароль один раз надсилаються на сервер EcoFlow, щоб отримати ідентифікатор вашого акаунта. Таблицю ключів Світлик один раз завантажує з GitHub, з відкритого проєкту ha-ef-ble. Далі Світлик говорить зі станцією напряму через Bluetooth, без інтернету.</p>
+    <p>Як і під час відкриття будь-якого сайту, ці сервіси бачать вашу IP-адресу й технічні дані запиту. Вони обробляють їх за власними правилами.</p>
+
+    <h2>4. Сайт</h2>
+    <p>Сайт розміщено на GitHub Pages. GitHub отримує технічні дані запитів, зокрема IP-адресу, щоб показувати сторінки й захищати сервіс.</p>
+    <p>Сайт використовує Google Analytics 4, щоб розуміти, скільки людей заходить і що їм цікаво. Він ставить cookie і збирає дані про перегляди сторінок, приблизне місцезнаходження, пристрій і браузер, а також дії на сторінці: натискання на «Завантажити» та посилання, відкриття відповідей у питаннях, перегляд розділів і дії з прикладом панелі. Ці дані обробляє Google, зокрема за межами України. Вимкнути збір можна в налаштуваннях браузера, блокувальником або доповненням Google Analytics Opt-out.</p>
+
+    <h2>5. Коли ви пишете автору</h2>
+    <p>«Надіслати відгук…» у Світлику відкриває Telegram, де вже вписано технічні дані: версії Світлика й macOS, модель Mac, регіон і черга основної адреси (без вулиці й будинку), стан графіків і станції та останні події з журналу. Ви бачите цей текст і можете його змінити до надсилання.</p>
+    <p>Коли ви пишете в Telegram, я отримую те, що ви надіслали, і дані вашого профілю. Це потрібно лише для відповіді та виправлення помилок. Не надсилайте паролі чи інші чутливі дані.</p>
+
+    <h2>6. Ваші права</h2>
+    <p>Можете запитати, які ваші дані є в листуванні, попросити виправити або видалити їх. Дані на Mac ви контролюєте самі. Даних, які Світлик ніде не зберігає, я не можу ні показати, ні видалити.</p>
+
+    <h2>7. Зміни</h2>
+    <p>Якщо щось зміниться в тому, як Світлик чи сайт працюють із даними, ця сторінка оновиться з новою датою.</p>
+  </main>
+  <footer class="footer">
+    <div><a class="brand" href="./"><svg aria-hidden="true"><use href="#bulb"/></svg><span>Світлик</span></a><p>Є також <a href="https://denk0-ua.github.io/Svitlyk/">версія для Windows</a>.</p></div>
+    <div class="footer-right">
+      <a href="https://t.me/DenK0_UA" target="_blank" rel="noopener">Написати автору в Telegram <svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></a>
+      <small>Світлик показує плановий графік і повідомлення ДТЕК. Фактичні відключення можуть відрізнятися.</small>
+      <p class="legal"><a href="privacy.html">Конфіденційність</a> <a href="terms.html">Умови використання</a></p>
+    </div>
+  </footer>
+</body>
+</html>
