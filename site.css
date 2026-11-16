@@ -214,6 +214,9 @@ html[data-os="win"] .shot{max-width:900px}
 .mp-count .mp-min{font-size:13px}
 .mp-count small{font-size:11px;color:var(--mp-muted);margin-left:2px}
 .mp-caption{color:var(--mp-muted);margin-top:4px}
+.mp-battery{display:flex;align-items:center;gap:5px;margin-top:3px;color:#2bb24c;font-weight:600}
+.mp-battery svg{width:16px;height:8px;flex:none}
+.mac-demo[data-light="on"] .mp-battery{display:none}
 .mp-bulb{width:40px;height:48px;color:var(--lamp);--filament:var(--mp-bg);filter:drop-shadow(0 0 14px #ffcd35aa);transition:color .4s,filter .4s}
 .mac-demo[data-light="off"] .mp-bulb{color:#8d8b86;filter:none}
 @media (prefers-color-scheme:dark){.mac-demo[data-light="off"] .mp-bulb{color:#5d5d63}}
