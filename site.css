@@ -139,6 +139,9 @@ html[data-os="win"] .shot{max-width:900px}
 .faq summary::after{content:"+";font-weight:400;color:var(--muted);transition:rotate .3s var(--ease)}
 .faq details[open] summary::after{rotate:45deg}
 .faq details p{padding:0 0 22px;color:var(--muted);max-width:40em}
+.faq details ol{margin:0;padding:0 0 22px 1.3em;color:var(--muted);max-width:40em}
+.faq details li{padding-left:4px;margin:0 0 8px}
+.faq details p+ol{margin-top:-8px}
 
 /* Last call */
 .final{text-align:center;padding:clamp(80px,12vw,140px) var(--gutter) clamp(90px,13vw,150px)}

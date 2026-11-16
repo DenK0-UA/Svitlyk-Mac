@@ -26,6 +26,13 @@ function trackLinkClick(event) {
 }
 document.addEventListener('click', trackLinkClick);
 document.addEventListener('auxclick', event => { if (event.button === 1) trackLinkClick(event); });
+// A link to an answer («Як підключити станцію») opens that answer.
+function openAnswerFromHash() {
+  const target = location.hash && document.getElementById(location.hash.slice(1));
+  if (target && target.tagName === 'DETAILS') target.open = true;
+}
+window.addEventListener('hashchange', openAnswerFromHash);
+openAnswerFromHash();
 document.querySelectorAll('.faq details').forEach(item => {
   item.addEventListener('toggle', () => { if (item.open) trackEvent('faq_open', { faq_question: item.dataset.question }); });
 });

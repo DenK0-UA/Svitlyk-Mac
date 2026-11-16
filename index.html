@@ -17,7 +17,7 @@
   <title>Світлик для Mac — світло є. А до котрої?</title>
   <link rel="icon" href="assets/bulb.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/Zakon-Bold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="site.css?v=2">
+  <link rel="stylesheet" href="site.css?v=3">
   <script>
     // The visitor's system decides what the page shows, before anything is drawn.
     (function () {
@@ -39,7 +39,7 @@
     gtag('js', new Date());
     gtag('config', 'G-LN29BEMHQQ');
   </script>
-  <script src="site.js?v=2" defer></script>
+  <script src="site.js?v=3" defer></script>
 </head>
 <body>
   <svg class="symbols" aria-hidden="true"><defs>
@@ -171,7 +171,7 @@
           <div class="row-art mac-demo" aria-hidden="true"><div class="mac-panel art-panel"><div class="mp-card" style="margin:0"><p class="mp-card-title mp-watch-title">Стежу також<span class="mp-plus">+</span></p><p class="mp-watch"><b>Батьки</b><span><svg><use href="#bulb"/></svg>Світло є до 08:30 завтра</span></p><p class="mp-watch"><b>Робота</b><span class="is-off"><svg><use href="#bulb"/></svg>Без світла до 23:30</span></p><p class="mp-watch"><b>Дача</b><span><svg><use href="#bulb"/></svg>Світло є до 21:00</span></p></div></div></div>
         </div>
         <div class="row only-mac">
-          <div class="row-text"><h3>Бачить вашу станцію EcoFlow.</h3><p>Через Bluetooth, без інтернету: чи світло справді є, заряд, напругу в мережі й на скільки вистачить батареї. Зникло світло — повідомить одразу, навіть якщо ДТЕК ще мовчить. А під відліком покаже, чи вистачить станції до увімкнення світла; якщо ні — при якому споживанні вистачить.</p></div>
+          <div class="row-text"><h3>Бачить вашу станцію EcoFlow.</h3><p>Через Bluetooth, без інтернету: чи світло справді є, заряд, напругу в мережі й на скільки вистачить батареї. Зникло світло — повідомить одразу, навіть якщо ДТЕК ще мовчить. А під відліком покаже, чи вистачить станції до увімкнення світла; якщо ні — при якому споживанні вистачить. <a href="#station-help" data-analytics="navigation_click" data-location="features" data-target="station-help">Як підключити станцію</a></p></div>
           <div class="row-art mac-demo" aria-hidden="true"><div class="mac-panel art-panel"><div class="mp-card mp-station" style="margin:0"><p class="mp-card-title">Станція EcoFlow</p><p class="mp-row"><b>Від батареї</b><b class="mp-volt">230 В</b></p><p class="mp-row"><span>Заряд</span><b>64%</b></p><div class="mp-charge"><i style="width:64%"></i></div><p class="mp-row"><span>Вистачить приблизно на</span><span>5 год 40 хв</span></p><p class="mp-row"><span>Навантаження</span><span>320 Вт</span></p></div></div></div>
         </div>
       </div>
@@ -206,7 +206,17 @@
         <details data-question="internet"><summary>Потрібен інтернет?</summary><p>Щоб оновлювати графік — так. Якщо мережа зникла, Світлик покаже останній відомий графік і чесно позначить, станом на котру він годину.</p></details>
         <details class="only-mac" data-question="mac-install"><summary>Навіщо команда в Терміналі?</summary><p>Світлик ще не має платного підпису Apple, тому macOS спершу не дає його відкрити. Одна команда знімає це обмеження лише зі Світлика — <a href="#install" data-analytics="navigation_click" data-location="faq" data-target="install">ось покроково</a>. Це треба зробити один раз: нові версії Світлик встановить сам.</p></details>
         <details class="only-mac" data-question="mac-intel"><summary>Чи працює на Маках з Intel?</summary><p>Поки ні: потрібен Mac з M1 або новішим процесором і macOS 26 чи новіша.</p></details>
-        <details class="only-mac" data-question="station"><summary>Які зарядні станції бачить Світлик?</summary><p>Поки EcoFlow Delta 2 Max, на Mac. Світлик під’єднується до станції через Bluetooth, тож Mac має бути поруч і не спати. Підтримка експериментальна.</p></details>
+        <details id="station-help" data-question="station"><summary>Як підключити зарядну станцію EcoFlow?</summary>
+          <p>Світлик під’єднується до станції напряму через Bluetooth — інтернет для цього не потрібен. Перевірено на EcoFlow Delta 2 Max.</p>
+          <ol>
+            <li>Увімкніть станцію й тримайте Mac поруч, у межах кількох метрів.</li>
+            <li>Відкрийте <b>Налаштування Світлика → Станція</b> і натисніть <b>«Знайти станцію»</b>. macOS спитає дозвіл на Bluetooth — дозвольте.</li>
+            <li>Виберіть свою станцію в списку.</li>
+            <li>Введіть email і пароль від застосунку EcoFlow і натисніть <b>«Під’єднати»</b>. Пароль потрібен лише раз, щоб станція впізнала ваш акаунт: він іде тільки в EcoFlow, Світлик його не зберігає.</li>
+            <li>Готово: у панелі з’явиться блок «Станція EcoFlow». Сповіщення про світло й заряд налаштовуються в <b>Налаштування → Сповіщення</b>.</li>
+          </ol>
+          <p>Щоб Світлик бачив станцію весь час, Mac має бути поруч і не спати. Якщо вашої станції немає в списку або Світлик пише «Поки не підтримується» — <a href="https://t.me/DenK0_UA">напишіть нам</a>, додамо.</p>
+        </details>
         <details data-question="remove"><summary>Як видалити Світлик?</summary><p>Вимкніть автозапуск у налаштуваннях і закрийте Світлик. На Windows видаліть <code>Svitlyk.exe</code> і папку <code>%LOCALAPPDATA%\Svitlyk</code>, на Mac — Світлик із «Програм» і папку <code>~/Library/Application Support/Svitlyk</code>.</p></details>
       </div>
     </section>
